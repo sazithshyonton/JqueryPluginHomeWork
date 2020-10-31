@@ -1,0 +1,70 @@
+body{
+	font-size: 2rem;
+}
+
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+
+.beefup-head {
+  cursor: pointer;
+  position: relative;
+}
+
+.beefup-head:after {
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #ddd transparent transparent transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 0;
+  margin-top: -6px;
+  top: 50%;
+  width: 0;
+}
+
+.open > .beefup-head:after {
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #ddd transparent;
+}
+
+
+.slider .inner {
+  position: relative;
+  white-space: nowrap;
+  transition: all 1s ease;
+}
+
+.slider .inner img {
+  width: 100%;
+}
+
+
+@media (min-width: 992px){
+  .dropdown-menu .dropdown-toggle:after {
+    border-top: .3em solid transparent;
+    border-right: 0;
+    border-bottom: .3em solid transparent;
+    border-left: .3em solid;
+  }
+  .dropdown-menu .dropdown-menu{
+    margin-left:0; margin-right: 0;
+  }
+  .dropdown-menu li{
+    position: relative;
+  }
+  .nav-item .submenu{ 
+    display: none;
+    position: absolute;
+    left:100%; top:-7px;
+  }
+  .nav-item .submenu-left{ 
+    right:100%; left:auto;
+  }
+  .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+  .dropdown-menu > li:hover > .submenu{
+    display: block;
+  }
+}

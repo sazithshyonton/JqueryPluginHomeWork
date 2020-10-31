@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Plugin -->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/flatly/bootstrap.min.css">
+    <!-- Plugin -->
+
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/media.css">
+
+    <title> Jquery Plugin </title>
+   <!-- Fontawesome Link -->
+      <script src="https://kit.fontawesome.com/c842d05265.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+
+
+       
+       <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">jQuery Image Magnifier Glass</h1>
+          <div class="wrap" style="display: flex; justify-content: center">
+      <div class="left" style="margin-right: 50px">
+        <img src="../img/a1.png" width="400" class="example1" />
+      </div>
+      <div class="right">
+        <img src="../img/a2.png" width="400" class="example2" />
+      </div>
+    </div>
+          
+        </div>
+      </div>
+      
+
+    </div>
+
+    
+
+  
+    <!-- JS links -->
+    <script src="../js/jquery.min.js"></script>
+
+
+    <!-- Plugin -->
+    <script src="../assets/magnifierglass/BUP.js"></script>
+    <!-- Plugin -->
+
+    <script src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+    <script >
+      
+        $(document).ready(function(){
+
+          $('.example1').BUP(null, 0.5);
+           $('.example2').BUP(null, 0.5);
+
+
+        });
+
+         
+
+    </script>
+  </body>
+</html>

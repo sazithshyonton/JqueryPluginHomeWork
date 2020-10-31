@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--  meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Plugin -->
+  <link rel="stylesheet" type="text/css" href="../assets/MultiSelectPlugin/magicsuggest.css">
+  <!-- Plugin -->
+  <!-- CSS Links -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/media.css">
+  <title>Jquery Plugin</title>
+  <!-- Fontawesome Link -->
+  <script src="https://kit.fontawesome.com/c842d05265.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="margin-top: 50px;">jQuery MagicSuggest Plugin Basic</h1>
+        <div id="ms1" class="form-control"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center" style="margin-top: 50px;">Tooltip plugin</h3>
+        <button id="test1" class="btn btn-lg btn-block btn-info">Hover Me</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="margin-bottom: 80px;">
+        <h3 class="text-center" style="margin: 50px 0;">jQuery follow Popup</h3>
+        <img data-imgurl="../img/blog1.jpg" src="../img/blog1.jpg" class="demo" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <h3 class="text-center" style="margin-bottom: 50px;">Minimalist Automatic Gallery Carousel </h3>
+        <div class="slider">
+          <div class="inner">
+            <img src="../img/blog1.jpg" alt="Alt 1" />
+            <img src="../img/blog2.jpg" alt="Alt 2" />
+            <img src="../img/blog3.jpg" alt="Alt 3" />
+            <img src="../img/blog4.jpg" alt="Alt 4" />
+            <img src="../img/blog5.jpg" alt="Alt 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JS links -->
+  <script src="../js/jquery.min.js"></script>
+  <!-- Plugin -->
+  <script src="../assets/MultiSelectPlugin/magicsuggest.js"></script>
+  <script src="../assets/tooltip/easyTooltip.min.js"></script>
+  <script src="../assets/followPopup/jquery.followPopup.js"></script>
+  <!-- Plugin -->
+  <script src="../js/popper.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+    
+            });
+    
+    
+            $(function() {
+            var ms1 = $('#ms1').magicSuggest({
+              data: ['Dhaka','Rajshahi','Chittagong','Barisal','Khulna','Shylet','Cox Bazar','Dhanmondi','Mohammadpur','Mirpur','Rangpur']
+            });
+          });
+    
+    
+              $("#test1").easyTooltip({
+          content: "<span style='font-size:30px;color:red;background:green;'>Hello SSB</span>"
+        });
+    
+    
+              $('.demo').followPopup({
+      html: '<img src="" alt="">',
+      afterEnter: function($this) {
+        console.log($this);
+        var url = $this.data('imgurl');
+        $('.js-followPopup').children('img').attr('src', url);
+      }
+    });
+    
+    
+              (function(){
+        let left = 0
+        let cont = 1
+        const imagesToShow = parseInt($(".inner *").length)
+        setInterval(()=>{  
+          if (cont++ <= imagesToShow){
+            $(".inner").css("left",`${left}vw`)
+            left -= 100
+            } else{
+              cont = 1
+              left = 0
+            }
+        },2000)
+    })()
+  </script>
+</body>
+
+</html>

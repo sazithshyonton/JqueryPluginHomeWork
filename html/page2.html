@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--  meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Plugin -->
+  <link rel="stylesheet" type="text/css" href="../assets/simplelightbox/simple-lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/Chocolat/chocolat.css">
+  <!-- Plugin -->
+  <!-- CSS Links -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/media.css">
+  <title>Jquery Plugin</title>
+  <!-- Fontawesome Link -->
+  <script src="https://kit.fontawesome.com/c842d05265.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Curve text Plugin -->
+  <h2 style="margin: 80px 0;" class="text-center">Jquery Curve Text plugin</h2>
+  <h2 id="demo1">Here’s some curved text flowing clockwise.</h2>
+  <h2 id="demo3">This text makes a complete rotation no matter how long it is. </h2>
+  <!-- Curve text Plugin -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="margin: 80px 0;">jQuery Simple Lightbox Plugin</h2>
+        <div class="gallery">
+          <a href="../img/blog1.jpg" class="big" rel="rel1">
+            <img src="../img/blog1.jpg" alt="" title="Image 1">
+          </a>
+          <a href="../img/blog2.jpg" class="big" rel="rel1">
+            <img src="../img/blog2.jpg" alt="" title="Image 2">
+          </a>
+          <a href="../img/blog3.jpg" class="big" rel="rel2">
+            <img src="../img/blog3.jpg" alt="" title="Image 3">
+          </a>
+          <a href="../img/blog4.jpg" class="big" rel="rel2">
+            <img src="../img/blog4.jpg" alt="" title="Image 4">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="text-center">
+          <h2 style="margin: 80px 0;">Thumbnail Image Slider Plugin with jQuery - Thumb slider</h2>
+          <div id="slider-container">
+            <div class="slides">
+              <div class="slide">
+                <img src="../img/bannar.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="../img/blog1.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="../img/blog2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="controls"> <span class="control">
+      <img src="../img/contact.png" alt="" />
+    </span>
+              <span class="control">
+      <img src="../img/fb.png" alt="" />
+    </span>
+              <span class="control">
+      <img src="../img/insta.png" alt="" />
+    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="text-center" style="margin: 80px 0;">Responsive & Dynamic Image Lightbox Plugin - Chocolat</h2>
+        <a class="chocolat-image" href="../img/2.jpg" title="Caption 1">
+          <img src="../img/contact.png" />
+        </a>
+        <a class="chocolat-image" href="../img/3.jpg" title="Caption 2">
+          <img src="../img/fb.png" />
+        </a>
+        <a class="chocolat-image" href="../img/4.jpg" title="Caption 2">
+          <img src="../img/insta.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--JS links -->
+  <script src="../js/jquery.min.js"></script>
+  <!-- Plugin -->
+  <!-- curve text -->
+  <script src="../assets/CircleType/circletype.min.js"></script>
+  <script src="../assets/simplelightbox/simple-lightbox.min.js"></script>
+  <script src="../assets/simplelightbox/simple-lightbox.legacy.min.js"></script>
+  <script src="../assets/simplelightbox/simple-lightbox.jquery.min.js"></script>
+  <script src="../assets/thumbnailImageslider/thumb_slider.js"></script>
+  <script src="../assets/Chocolat/chocolat.js"></script>
+  <!-- Plugin -->
+  <script src="../js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script>
+    $(document).ready(function(){
+    
+              // As A jQuery Plugin -->
+    var gallery = $('.gallery a').simpleLightbox({
+        /* options */
+    });
+    
+      $('#slider-container').thumb_slider();
+            });
+    
+    
+    
+            //curve text
+             new CircleType(document.getElementById('demo1'))
+            .radius(384);
+    
+            new CircleType(document.getElementById('demo3'));
+            //curve text
+    
+            // As A Vanilla JavaScript Plugin
+    var gallery = new SimpleLightbox('.gallery a', { 
+        /* options */ 
+    
+    });
+            
+    
+      Chocolat(document.querySelectorAll('.chocolat-image'), {
+      // options here
+    })
+  </script>
+</body>
+
+</html>
